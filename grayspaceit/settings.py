@@ -124,3 +124,6 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [str(BASE_DIR / "static")]
 
 AUTH_USER_MODEL = 'authentication.CustomUser'
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
