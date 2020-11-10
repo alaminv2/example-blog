@@ -41,10 +41,10 @@
                     <a class="nav-link" href="/posts">Posts</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/auth/login">Login</a>
+                    <a class="nav-link" href="{% url 'login' %}">Login</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/auth/register">Register</a>
+                    <a class="nav-link" href="{% url 'register' %}">Register</a>
                     </li>
                 {% endif %}
 
@@ -52,10 +52,10 @@
         </div>
     </div>
 </nav>
-{% if user.is_authenticated %}
-    {% block container %}
-    {% endblock container %}
-{% endif %}
+{#{% if user.is_authenticated %}#}
+{% block container %}
+{% endblock container %}
+{#{% endif %}#}
 
 <!-- Footer -->
 <footer class="py-5 bg-dark">

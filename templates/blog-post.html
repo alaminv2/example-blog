@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 
-{% block container %}
+{% if user.is_authenticated %}
 
+{% block container %}
+    {% if user.is_authenticated %}
   <!-- Page Content -->
-  <div class="container">
+        <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
     <h1 class="mt-4 mb-3">Post Title
@@ -170,5 +172,8 @@
 
   </div>
   <!-- /.container -->
+    {% endif %}
 
 {% endblock container %}
+
+{% endif %}
