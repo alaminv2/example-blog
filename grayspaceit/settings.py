@@ -130,5 +130,5 @@ STATICFILES_DIRS = [str(BASE_DIR / "static")]
 
 AUTH_USER_MODEL = 'authentication.CustomUser'
 
-LOGIN_REDIRECT_URL = '/login'
-LOGOUT_REDIRECT_URL = 'home'
+LOGIN_URL = '/account/login/'
+# LOGOUT_REDIRECT_URL = '/account/login/'

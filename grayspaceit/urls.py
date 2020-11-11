@@ -21,8 +21,8 @@ from posts.views import posts
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('authentication.urls')),
+    path('account/', include('authentication.urls')),
+    path('posts/', include('posts.urls')),
+    path('', posts, name='homeee'),
     # path('auth/', include('django.contrib.auth.urls')),
-    # path('posts/', include('posts.urls')),
-    # path('', posts),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

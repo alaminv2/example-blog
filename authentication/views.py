@@ -28,7 +28,7 @@ def LoginView(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return HttpResponse('Loggin successfull')
+                return redirect('homeee')
     return render(request, 'registration/login.html', {'form': form})
 
 
