@@ -24,5 +24,5 @@ urlpatterns = [
     path('account/', include('authentication.urls')),
     path('posts/', include('posts.urls')),
     path('', posts, name='homeee'),
-    # path('auth/', include('django.contrib.auth.urls')),
+    path('api/', include('restFrame.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

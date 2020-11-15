@@ -1,15 +1,14 @@
+# For Response Material
 from django.http import Http404
 from django.shortcuts import render, HttpResponse, redirect
 from django.urls import reverse_lazy, reverse
+
+# For forms, Models, Views
 from django.views.generic import CreateView
 from .forms import CustomUserCreationForm, loginForm
+# For authentication
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
-
-# LOGIN VIEW ENDPOINT
-
-# def login(request):
-#     return render(request, 'login.html')
 
 
 class SignUpView(CreateView):

@@ -34,7 +34,7 @@ def post_details(request, id):
 
     res = requests.get(
         f'https://jsonplaceholder.typicode.com/posts/{id}/comments')
-    print(res.text)
+    # print(res.text)
     cmnts = res.json()
     comments = []
     for item in cmnts:
